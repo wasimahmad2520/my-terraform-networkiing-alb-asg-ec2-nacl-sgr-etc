@@ -1,5 +1,4 @@
 
-
 // Create aws_ami filter to pick up the ami available in your region
 data "aws_ami" "amazon-linux-2" {
   most_recent = true
@@ -10,9 +9,6 @@ data "aws_ami" "amazon-linux-2" {
     values = ["amzn2-ami-hvm*"]
   }
 }
-
-
-
 
 
 // Configure the EC2 instance in a public subnet
@@ -362,6 +358,8 @@ resource "aws_autoscaling_attachment" "asg_attachment_bar" {
   autoscaling_group_name = aws_autoscaling_group.web.id
   lb_target_group_arn    = aws_lb_target_group.lb_target.arn
 }
+
+
 
 output "ALB_DNS" {
   description = "ALB_DNS"
