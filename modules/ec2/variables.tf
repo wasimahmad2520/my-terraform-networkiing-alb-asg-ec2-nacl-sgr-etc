@@ -17,3 +17,11 @@ variable "sg_pub_id" {
 variable "sg_priv_id" {
   type = any
 }
+
+
+variable "os-platform" {
+  description = "Ubuntu OS"
+  default = "ami-0892d3c7ee96c0bf7"
+  type = string
+  
+}
