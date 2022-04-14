@@ -92,7 +92,7 @@ resource "aws_network_acl_rule" "ssh" {
 }
 
 # Allow all internet access into the dmz
-/* resource "aws_network_acl_rule" "all" {
+resource "aws_network_acl_rule" "all" {
   network_acl_id = "${aws_network_acl.dmz.id}"
   rule_number    = 600
   egress         = false
@@ -101,7 +101,7 @@ resource "aws_network_acl_rule" "ssh" {
   cidr_block     = "0.0.0.0/0"
   from_port      = 0
   to_port        = 65500
-} */
+}
 
 resource "aws_network_acl_rule" "outbound" {
   network_acl_id = "${aws_network_acl.dmz.id}"
@@ -193,13 +193,13 @@ resource "aws_security_group" "allow_ssh_priv" {
   }
 
 
-  /* ingress {
+  ingress {
     description = "DB Services VPC clients"
     from_port   = 1
     to_port     = 60000
     protocol    = "tcp"
     cidr_blocks = ["10.0.0.0/16"]
-  } */
+  }
   egress {
     from_port   = 0
     to_port     = 0

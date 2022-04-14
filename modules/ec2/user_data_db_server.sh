@@ -13,10 +13,8 @@ sudo mv Cake-Shop-Website ecommerce
 sudo mysql 
 create database ecommerce;
 exit;
-
 sudo mysql -u root  ecommerce < ecommerce/Database/cakeshop.sql
 sleep 10
-
 sudo mysql -u root
 CREATE USER 'wasimahmad'@'localhost' IDENTIFIED BY 'Wasimahmad$$%4' ;
 CREATE USER 'wasimahmad'@'%' IDENTIFIED BY 'Wasimahmad$$%4' ;
