@@ -1,4 +1,4 @@
-# AWS VPC Creation with Terraform
+# AWS VPC Creation with Terraform 
 This project will create a VCP with Internet Gateway, subnets accross 2 AZs: one public
 and one one private.
 
@@ -24,7 +24,13 @@ Both security groups are dynamically created in the network module.
 ## Current state
 
 Modules:
-
+- High Availability
+- Auto Scalling
+- Application Load Balancer
+- NACL
+- SGr
+- Web Server On public subnet
+- Database Server On Private Subnet
 - ssh-key: Generates an ssh key pair
 - network: Sets up a VPC with IGWs, NAT GWs, 2 public subnets, 2 private subnets, SG to SSH in from anywhere
 - ec2: Currently creates a bastian ec2 instance in a public subnet and a ec2 instance in a private subnet
