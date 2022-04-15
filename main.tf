@@ -2,12 +2,21 @@
 /* left:- variables names in ec2 module */
 /* right:- outputs names in other modules */
 
+
 /* Create networking */
 module "networking" {
   source    = "./modules/networking"
   namespace = var.namespace
 }
 
+
+
+/* Create NACL */
+module "nacl" {
+  source    = "./modules/nacl"
+  namespace = var.namespace
+  vpc=  module.networking.vpc
+}
 
 /* Create SSH Key */
 module "ssh-key" {
