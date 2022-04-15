@@ -10,7 +10,7 @@ variable "region" {
   type        = string
 }
 
- /* variable "main_vpc_id" {
+/* variable "main_vpc_id" {
   description = "VPC ID"
   type        = string
 } */

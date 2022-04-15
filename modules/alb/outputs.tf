@@ -1,3 +1,4 @@
+/* Reference variables */
 output "my_ami" {
   value = aws_ami_from_instance.my_ami
 }
@@ -10,6 +11,13 @@ output "alb" {
   value = aws_lb.alb
 }
 
+
 output "lb_target" {
   value = aws_lb_target_group.lb_target
+}
+
+/* ends here */
+
+output "dns_name" {
+  value = aws_lb.alb.dns_name
 }

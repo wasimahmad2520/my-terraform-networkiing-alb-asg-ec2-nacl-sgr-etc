@@ -10,13 +10,13 @@ module "networking" {
 }
 
 
-
 /* Create NACL */
 module "nacl" {
   source    = "./modules/nacl"
   namespace = var.namespace
   vpc=  module.networking.vpc
 }
+
 
 /* Create SSH Key */
 module "ssh-key" {
