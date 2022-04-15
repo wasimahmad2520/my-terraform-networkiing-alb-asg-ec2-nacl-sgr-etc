@@ -3,7 +3,7 @@
 // After that, write the private key to a local file and upload the public key to AWS
 
 resource "tls_private_key" "key" {
-  algorithm = "RSA"
+  algorithm = var.encryption_algorithm
 }
 
 resource "local_file" "private_key" {

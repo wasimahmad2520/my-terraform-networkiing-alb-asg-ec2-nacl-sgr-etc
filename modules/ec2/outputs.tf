@@ -5,3 +5,7 @@ output "public_ip" {
 output "private_ip" {
   value = aws_instance.ec2_private.private_ip
 }
+
+output "ec2_instance" {
+  value = aws_instance.ec2_public
+}
